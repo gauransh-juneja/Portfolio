@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Engineer Portfolio – Your Name</title>
+    <meta name="description" content="Engineer portfolio of Your Name: projects, experience, skills, and contact." />
+
+    <!-- Open Graph / Twitter -->
+    <meta property="og:title" content="Portfolio – Gauransh Juneja" />
+    <meta property="og:description" content="Projects, experience, and contact for Your Name (Engineer)." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/" />
+    <meta property="og:image" content="/assets/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="theme-color" content="#0f172a" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <script>
+      // Respect user's preferred color scheme early to prevent flash
+      (function () {
+        const persisted = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const theme = persisted || (prefersDark ? 'dark' : 'light');
+        document.documentElement.dataset.theme = theme;
+      })();
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#content">Skip to content</a>
+
+    <header class="site-header" role="banner">
+      <div class="container header-inner">
+        <a class="brand" href="#home" aria-label="Homepage">
+          <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2l9 5v10l-9 5l-9-5V7z"/></svg>
+          <span>Gauransh Juneja</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary">
+          <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+          <ul class="nav-list">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li>
+              <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="content" class="site-main" tabindex="-1">
+      <!-- Hero -->
+      <section id="home" class="section hero">
+        <div class="container">
+          <h1 class="hero-title">Hi, I'm <span class="accent">Gauransh Juneja</span>.</h1>
+          <p class="hero-subtitle">Machine Learning and Data Science enthusiast</p>
+          <div class="hero-cta">
+            <a class="btn primary" href="#projects">View Projects</a>
+            <a class="btn" href="#contact">Get in Touch</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about" class="section">
+        <div class="container grid two">
+          <div>
+            <h2>About</h2>
+            <p>
+              Machine Learning & Data Science Engineer with Hands-on experience building and productionizing NLP an time series model,
+              developing reproducible ML pipelines and delivering stake holder-facing dashboards. Strong in model Evaluation, 
+              experiment automation, and end to end model delivery.
+              
+            <ul class="highlights">
+              <li>Python, C++, SQL</li>
+              <li>TensorFlow, Keras, PyTorch, scikit-learn, NumPy, Pandas, Matplotlib NLP & LLMs: BERT, RoBERTa, LangChain, GroqAPI</li>
+              <li>Cloud (AWS), EDA, Feature Engineering, Data Visualization, Streamlit, FastAPI </li>
+            </ul>
+          </div>
+          <div>
+            <div class="about-card">
+              <img src="/assets/profile.jpg" alt="Portrait of Your Name" />
+              <div class="about-card__meta">
+                <a class="btn small" href="/assets/Your_Name_Resume.pdf" download>Download Resume</a>
+                <div class="socials">
+                  <a href="https://www.linkedin.com/in/gauransh-juneja0701/" aria-label="LinkedIn" target="_blank" rel="noreferrer noopener">in</a>
+                  <a href="https://github.com/gauransh-juneja" aria-label="GitHub" target="_blank" rel="noreferrer noopener">gh</a>
+                  <a href="mailto:gauranshjuneja.dev@gmail.com" aria-label="Email">@</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience -->
+      <section id="experience" class="section">
+        <div class="container">
+          <h2>Experience</h2>
+          <div class="timeline" id="experience-list">
+            <!-- populated by JS -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects" class="section">
+        <div class="container">
+          <h2>Projects</h2>
+          <div id="projects-grid" class="grid three">
+            <!-- populated by JS -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section id="skills" class="section">
+        <div class="container">
+          <h2>Skills</h2>
+          <ul class="skills" id="skills-list">
+            <!-- populated by JS -->
+          </ul>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="section">
+        <div class="container">
+          <h2>Contact</h2>
+          <p>Have a question or want to collaborate? Send a message.</p>
+          <form id="contact-form" class="contact-form" action="https://formspree.io/f/xzzallrq" method="POST" novalidate>
+            <div class="form-field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required />
+              <span class="error" data-for="name"></span>
+            </div>
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required />
+              <span class="error" data-for="email"></span>
+            </div>
+            <div class="form-field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+              <span class="error" data-for="message"></span>
+            </div>
+            <button class="btn primary" type="submit">Send</button>
+            <p id="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> Gauransh Juneja. All rights reserved.</p>
+        <a href="#home" class="back-to-top">Back to top ↑</a>
+      </div>
+    </footer>
+
+    <script src="/js/main.js" defer></script>
+  </body>
+  </html>
+
+
