@@ -27,7 +27,7 @@ if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 // Data (customize these arrays)
 const EXPERIENCE = [
   { company: 'Coding Blocks', role: 'Machine learning Intern', period: 'June 2025 - Aug 2025', summary: 'Developed and validated ML models with automated pipelines, accelerating team experiments and improving iteration speed.' },
-  { company: 'Chic Fashion', role: 'Data & Operations Intern', period: 'March 2024 - Oct 2024', summary: 'Digitized import–export records and built Python/Excel workflows, improving data accuracy and operational efficiency.' },
+  { company: 'Chic-Fashions', role: 'Data & Operations Intern', period: 'March 2024 - Oct 2024', summary: 'Digitized import–export records and built Python/Excel workflows, improving data accuracy and operational efficiency.' },
   { company: 'HP Computers', role: 'Machine Learning Trainee', period: 'Oct 2023 - Dec 2023', summary: 'Implemented supervised ML solutions and standardized preprocessing pipelines, reducing setup time and enhancing reproducibility.' },
 ];
 
