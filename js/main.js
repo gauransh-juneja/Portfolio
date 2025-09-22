@@ -104,8 +104,11 @@ if (projectsGrid) {
       <div class="project-card__body">
         <h3>${p.title}</h3>
         <p>${p.desc}</p>
-        <div class="tags">${p.tags.map((t) => `<span class="tag">${t}</span>`).join('')}</div>
+        <div class="tags">
+          ${p.tags.map((t) => `<span class="tag">${t}</span>`).join('')}
+        </div>
         <div style="display:flex; gap:10px; margin-top: 6px;">
+          ${p.link ? `<a class="btn small" href="${p.link}" target="_blank" rel="noreferrer noopener">Live</a>` : ''}
           <a class="btn small" href="${p.repo}" target="_blank" rel="noreferrer noopener">Code</a>
         </div>
       </div>
@@ -113,6 +116,7 @@ if (projectsGrid) {
     projectsGrid.appendChild(card);
   });
 }
+
 
 
 // Render skills
@@ -161,6 +165,7 @@ if (form) {
     }
   });
 }
+
 
 
 
